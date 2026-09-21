@@ -2,6 +2,8 @@
 
 A standalone Omarchy bar widget with seven compact, named workspace tabs and a matching dropdown menu for every tab.
 
+![Workspace Tabs preview](docs/preview.svg)
+
 ## Features
 
 - A ready-to-use Studio, Agents Lab, Social Media, Messages, Hermes OS, Git and Build layout
@@ -14,6 +16,7 @@ A standalone Omarchy bar widget with seven compact, named workspace tabs and a m
 ## Requirements
 
 - Omarchy with the Quickshell plugin bar
+- Hyprland workspaces 1 through 7
 
 ## Install
 
@@ -27,6 +30,26 @@ If the widget is not placed automatically:
 
 ```bash
 omarchy bar move community.workspace-tabs --section left
+```
+
+The default layout maps workspace IDs without moving any windows:
+
+| Position | Workspace | Label |
+| --- | ---: | --- |
+| 1 | 6 | Studio |
+| 2 | 1 | Agents Lab |
+| 3 | 2 | Social Media |
+| 4 | 7 | Messages |
+| 5 | 3 | Hermes OS |
+| 6 | 4 | Git |
+| 7 | 5 | Build |
+
+## Update or remove
+
+```bash
+omarchy plugin update community.workspace-tabs --yes
+omarchy plugin disable community.workspace-tabs
+omarchy plugin remove community.workspace-tabs --yes
 ```
 
 ## Commands
@@ -49,6 +72,12 @@ Every tab ships with the same safe dropdown behavior:
 - activate one of its first three open windows
 
 These menus use Hyprland's existing workspace metadata. They do not launch apps or require personal scripts.
+
+After changing the QML types, reload the shell:
+
+```bash
+omarchy restart shell
+```
 
 ## Privacy
 

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="560" viewBox="0 0 1600 560" role="img" aria-labelledby="title description">
+  <title id="title">Omarchy Workspace Tabs preview</title>
+  <desc id="description">A dark Omarchy bar with seven named workspace tabs and the Social Media dropdown open.</desc>
+  <defs>
+    <linearGradient id="backdrop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1218"/>
+      <stop offset="0.52" stop-color="#111c25"/>
+      <stop offset="1" stop-color="#071015"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#202329"/>
+      <stop offset="1" stop-color="#15171c"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="560" fill="url(#backdrop)"/>
+  <g opacity="0.3" stroke="#416276" stroke-width="1">
+    <path d="M0 110H1600M0 220H1600M0 330H1600M0 440H1600"/>
+    <path d="M160 0V560M400 0V560M640 0V560M880 0V560M1120 0V560M1360 0V560"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="94" y="50" width="1412" height="58" rx="15" fill="url(#bar)" stroke="#3c414a"/>
+    <g font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" fill="#d8dbe1">
+      <g transform="translate(118 65)"><text y="23" fill="#9aa2ad">✦</text><text x="30" y="23">Studio</text><text x="100" y="22" fill="#8b929c">▾</text></g>
+      <g transform="translate(252 65)"><text y="23" fill="#aeb8c6">◆</text><text x="30" y="23">Agents Lab</text><text x="133" y="22" fill="#8b929c">▾</text></g>
+
+      <rect x="425" y="59" width="196" height="40" rx="11" fill="#373a42" stroke="#6a6f79"/>
+      <g transform="translate(447 65)"><text y="23" fill="#76c7a1">●</text><text x="28" y="23" fill="#fff">Social Media</text><text x="145" y="22" fill="#c8cbd1">▴</text></g>
+
+      <g transform="translate(651 65)"><text y="23" fill="#aeb8c6">✉</text><text x="30" y="23">Messages</text><text x="125" y="22" fill="#8b929c">▾</text></g>
+      <g transform="translate(814 65)"><text y="23" fill="#aeb8c6">◇</text><text x="30" y="23">Hermes OS</text><text x="139" y="22" fill="#8b929c">▾</text></g>
+      <g transform="translate(991 65)"><text y="23" fill="#aeb8c6">⌁</text><text x="30" y="23">Git</text><text x="69" y="22" fill="#8b929c">▾</text></g>
+      <g transform="translate(1100 65)"><text y="23" fill="#aeb8c6">↗</text><text x="30" y="23">Build</text><text x="88" y="22" fill="#8b929c">▾</text></g>
+    </g>
+  </g>
+
+  <path d="M503 108v12h40v-12" fill="#191b20" stroke="#4a4e57"/>
+  <g filter="url(#shadow)">
+    <rect x="406" y="120" width="330" height="330" rx="12" fill="#191b20" stroke="#4a4e57"/>
+    <g font-family="Inter, ui-sans-serif, system-ui, sans-serif">
+      <text x="432" y="159" font-size="13" font-weight="700" letter-spacing="2" fill="#76c7a1">SOCIAL MEDIA</text>
+      <text x="432" y="189" font-size="16" fill="#f3f4f6">Posts, publishing and recordings</text>
+      <text x="432" y="217" font-size="14" fill="#76c7a1">2 windows open</text>
+
+      <rect x="424" y="236" width="294" height="58" rx="4" fill="#252932"/>
+      <text x="442" y="270" font-size="18" fill="#76c7a1">→</text>
+      <text x="474" y="261" font-size="15" font-weight="600" fill="#f3f4f6">Focus this workspace</text>
+      <text x="474" y="281" font-size="12" fill="#9ca3af">Switch to workspace 2</text>
+
+      <line x1="432" y1="313" x2="710" y2="313" stroke="#ffffff" stroke-opacity="0.12"/>
+      <text x="432" y="341" font-size="12" font-weight="700" letter-spacing="1.3" fill="#8f96a1">OPEN HERE · 2</text>
+
+      <rect x="424" y="353" width="294" height="38" rx="4" fill="#20242b"/>
+      <text x="442" y="378" font-size="15" fill="#76c7a1">↗</text>
+      <text x="474" y="378" font-size="14" fill="#edf0f4">Browser window</text>
+
+      <rect x="424" y="398" width="294" height="38" rx="4" fill="#20242b"/>
+      <text x="442" y="423" font-size="15" fill="#76c7a1">↗</text>
+      <text x="474" y="423" font-size="14" fill="#edf0f4">Recorder window</text>
+    </g>
+  </g>
+
+  <text x="800" y="515" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" fill="#87919d">Local workspace navigation for Omarchy · no accounts, services or telemetry</text>
+</svg>
