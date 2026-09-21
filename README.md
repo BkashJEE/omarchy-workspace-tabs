@@ -45,6 +45,20 @@ Change `workspaceOrder`, `workspaceLabels`, or `workspaceSymbols` near the top o
 
 The widget reads only the workspace and window metadata already exposed to Omarchy by Hyprland. It does not read application data, browser profiles, messages, cookies, tokens, credentials, or environment files.
 
+## Security and scope
+
+This plugin requires no API key, access token, password, account, network connection, environment variable, or configuration file. It does not start background services or send data anywhere.
+
+Its only external command focuses a Hyprland workspace:
+
+```text
+hyprctl eval hl.dispatch(hl.dsp.focus(...))
+```
+
+The complete distributable source is `manifest.json`, `Workspaces.qml`, and `WorkspaceMenu.qml`. Review those files before installing. GitHub secret scanning and push protection are enabled for this repository.
+
+See [SECURITY.md](SECURITY.md) for responsible disclosure and the repository's security boundaries.
+
 ## License
 
 MIT
