@@ -9,17 +9,35 @@ BarWidget {
   id: root
   moduleName: "community.workspace-tabs"
 
-  readonly property var workspaceOrder: [1, 2, 3, 4, 5, 6, 7]
-  readonly property var workspaceLabels: [
-    "Workspace 1",
-    "Workspace 2",
-    "Workspace 3",
-    "Workspace 4",
-    "Workspace 5",
-    "Workspace 6",
-    "Workspace 7"
-  ]
-  readonly property var workspaceSymbols: ["①", "②", "③", "④", "⑤", "⑥", "⑦"]
+  // A useful default layout that stays fully local and can be renamed freely.
+  readonly property var workspaceOrder: [6, 1, 2, 7, 3, 4, 5]
+  readonly property var workspaceLabels: ({
+    1: "Agents Lab",
+    2: "Social Media",
+    3: "Hermes OS",
+    4: "Git",
+    5: "Build",
+    6: "Studio",
+    7: "Messages"
+  })
+  readonly property var workspaceSymbols: ({
+    1: "◆",
+    2: "●",
+    3: "◇",
+    4: "⌁",
+    5: "↗",
+    6: "✦",
+    7: "✉"
+  })
+  readonly property var workspaceDescriptions: ({
+    1: "Coding agents and project work",
+    2: "Posts, publishing and recordings",
+    3: "Your local agent workspace",
+    4: "Repositories, changes and pull requests",
+    5: "Editor, terminal and app preview",
+    6: "Mission control for your work",
+    7: "Messaging apps and conversations"
+  })
 
   property bool menuOpen: false
   property int menuWorkspaceId: 1
@@ -37,11 +55,15 @@ BarWidget {
   }
 
   function labelForWorkspace(workspaceId) {
-    return root.workspaceLabels[workspaceId - 1] || "Workspace " + workspaceId
+    return root.workspaceLabels[workspaceId] || "Workspace " + workspaceId
   }
 
   function symbolForWorkspace(workspaceId) {
-    return root.workspaceSymbols[workspaceId - 1] || String(workspaceId)
+    return root.workspaceSymbols[workspaceId] || String(workspaceId)
+  }
+
+  function descriptionForWorkspace(workspaceId) {
+    return root.workspaceDescriptions[workspaceId] || "Workspace " + workspaceId
   }
 
   function toggleMenu(workspaceId, anchor) {
@@ -89,6 +111,7 @@ BarWidget {
       width: parent.width
       workspaceId: root.menuWorkspaceId
       workspaceName: root.labelForWorkspace(root.menuWorkspaceId)
+      workspaceDescription: root.descriptionForWorkspace(root.menuWorkspaceId)
       windows: root.menuWindows
       onDismissed: root.menuOpen = false
       onFocusRequested: {

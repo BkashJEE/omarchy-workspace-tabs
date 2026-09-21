@@ -1,12 +1,12 @@
 # Omarchy Workspace Tabs
 
-A standalone Omarchy bar widget with seven compact workspace tabs and matching menus.
+A standalone Omarchy bar widget with seven compact, named workspace tabs and a matching dropdown menu for every tab.
 
 ## Features
 
-- Workspaces 1 through 7 in a consistent tab layout
+- A ready-to-use Studio, Agents Lab, Social Media, Messages, Hermes OS, Git and Build layout
 - Active, occupied, and empty visual states
-- A matching dropdown for every tab
+- A matching dropdown for every tab with its purpose, live window count and focus action
 - Live window counts for each workspace
 - Quick access to three windows already open on a workspace
 - No application launchers, background services, automatic window movement, or account integrations
@@ -20,7 +20,7 @@ A standalone Omarchy bar widget with seven compact workspace tabs and matching m
 Copy this repository's HTTPS URL, then run:
 
 ```bash
-omarchy plugin add https://github.com/OWNER/omarchy-workspace-tabs.git --enable --yes
+omarchy plugin add https://github.com/BkashJEE/omarchy-workspace-tabs.git --enable --yes
 ```
 
 If the widget is not placed automatically:
@@ -39,7 +39,16 @@ omarchy-shell community.workspace-tabs close
 
 ## Customize
 
-Change `workspaceOrder`, `workspaceLabels`, or `workspaceSymbols` near the top of `Workspaces.qml`. Keep every `font.pixelSize` value as an integer.
+Change `workspaceOrder`, `workspaceLabels`, `workspaceSymbols`, or `workspaceDescriptions` near the top of `Workspaces.qml`. Keep every `font.pixelSize` value as an integer.
+
+Every tab ships with the same safe dropdown behavior:
+
+- show the workspace purpose
+- show the current number of open windows
+- focus the workspace
+- activate one of its first three open windows
+
+These menus use Hyprland's existing workspace metadata. They do not launch apps or require personal scripts.
 
 ## Privacy
 
