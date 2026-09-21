@@ -10,6 +10,7 @@ Item {
 
   property int workspaceId: 1
   property string workspaceName: "Workspace 1"
+  property string workspaceDescription: ""
   property var windows: []
 
   signal focusRequested()
@@ -45,10 +46,13 @@ Item {
     }
 
     Text {
-      text: "Workspace " + menu.workspaceId
+      text: menu.workspaceDescription
       color: "#f5f5f7"
       font.pixelSize: 12
       Layout.leftMargin: 9
+      Layout.rightMargin: 9
+      Layout.fillWidth: true
+      elide: Text.ElideRight
     }
 
     Text {

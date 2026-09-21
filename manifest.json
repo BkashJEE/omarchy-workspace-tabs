@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "id": "community.workspace-tabs",
   "name": "Workspace Tabs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Omarchy Community",
-  "description": "Seven generic Omarchy workspace tabs with matching menus",
+  "description": "Seven named Omarchy workspace tabs with matching dropdown menus",
   "kinds": ["bar-widget"],
   "entryPoints": {
     "barWidget": "Workspaces.qml"
